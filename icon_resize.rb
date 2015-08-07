@@ -30,7 +30,15 @@ if __FILE__ == $0
     'ios56_ipad_settings_1x' => 29,
     'ios8_carplay' => 120,
     'itunes_2x' => 1024,
-    'itunes_1x' => 512
+    'itunes_1x' => 512,
+    'apple_watch_notification_38' => 48,
+    'apple_watch_notification_42' => 55,
+    'apple_watch_settings_2x' => 58,
+    'apple_watch_settings_3x' => 87,
+    'apple_watch_home' => 80,
+    'apple_watch_long_look_42' => 88,
+    'apple_watch_short_look_38' => 172,
+    'apple_watch_short_look_42' => 196
   }
 
   if three_x
