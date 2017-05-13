@@ -9,6 +9,10 @@ if __FILE__ == $0
   three_x = ARGV.shift == '3x'
 
   resses = {
+    'ios910_ipa_prod_2x' => 167,
+    'ios78_iphone_notification_1x' => 20,
+    'ios78_iphone_notification_2x' => 40,
+    'ios78_iphone_notification_3x' => 60,
     'ios78_iphone_3x' => 180,
     'ios78_iphone_2x' => 120,
     'ios56_iphone_2x' => 114,
@@ -26,6 +30,8 @@ if __FILE__ == $0
     'ios56_ipad_spotlight_1x' => 50,
     'ios78_ipad_spotlight_2x' => 80,
     'ios78_ipad_spotlight_1x' => 40,
+    'ios78_ipad_notifications_1x' => 20,
+    'ios78_ipad_notifications_2x' => 40,
     'ios56_ipad_settings_2x' => 58,
     'ios56_ipad_settings_1x' => 29,
     'ios8_carplay' => 120,

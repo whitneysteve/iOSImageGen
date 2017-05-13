@@ -8,6 +8,9 @@ if __FILE__ == $0
   output_dir = ARGV.shift
 
   resses = {
+    'ios89_iphone_portrait_hd_55' => [1242, 2208],
+    'ios89_iphone_portrait_hd_47' => [750, 1334],
+    'ios89_iphone_landscape_hd_55' => [2208, 1242],
     'ios8_iphone_retina_hd_5.5_landscape' => [2208, 1242],
     'ios8_iphone_retina_hd_5.5_portrait' => [1242, 2208],
     'ios8_iphone_retina_hd_4.7_portrait' => [750, 1334],
@@ -35,8 +38,16 @@ if __FILE__ == $0
     res = resses[res_key]
     width = res[0]
     height = res[1]
+    largest = if width > height
+      width
+    else
+      height
+    end
     image = Magick::Image.read(input_file_name).first
-    image.crop(0, 0, width, height).write("#{output_dir}/#{res_key}.png")
+    image.change_geometry!("#{largest}x#{largest}") { |cols, rows, img|
+      newimg = img.resize(cols, rows)
+      newimg.crop(0, 0, width, height).write("#{output_dir}/#{res_key}.png")
+    }
   }
 
 end
