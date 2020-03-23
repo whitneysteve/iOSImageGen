@@ -58,7 +58,7 @@ if __FILE__ == $0
       image = Magick::Image.read(input_file_name).first
       image.change_geometry!("#{size}x#{size}") { |cols, rows, img|
         newimg = img.resize(cols, rows)
-        newimg.write("#{output_dir}/#{res_key}.png")
+        newimg.write("#{output_dir}/#{size}x#{size}.png")
       }
     }
   end
